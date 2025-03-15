@@ -4,9 +4,9 @@
     "items": [
       "/posts/bayesianinference/index.html",
       "/posts/corrandreg/index.html",
-      "/posts/lln/index.html",
       "/posts/probability/index.html",
-      "/posts/statisticaltalk/index.html"
+      "/posts/statisticaltalk/index.html",
+      "/posts/lln/index.html"
     ]
   },
   {
@@ -40,6 +40,15 @@
       "/posts/corrandreg/index.html",
       "/posts/lln/index.html",
       "/posts/probability/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/lln/index.html",
+    "items": [
+      "/posts/bayesianinference/index.html",
+      "/posts/corrandreg/index.html",
+      "/posts/probability/index.html",
+      "/posts/statisticaltalk/index.html"
     ]
   }
 ]

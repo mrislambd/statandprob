@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mrislambd.github.io/index.html</loc>
-    <lastmod>2025-03-15T00:52:38.990Z</lastmod>
+    <lastmod>2025-03-15T01:50:50.346Z</lastmod>
   </url>
   <url>
     <loc>https://mrislambd.github.io/posts/corrandreg/index.html</loc>
@@ -19,5 +19,9 @@
   <url>
     <loc>https://mrislambd.github.io/posts/statisticaltalk/index.html</loc>
     <lastmod>2025-03-15T01:45:41.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mrislambd.github.io/posts/lln/index.html</loc>
+    <lastmod>2025-03-15T17:18:19.784Z</lastmod>
   </url>
 </urlset>
