@@ -1,13 +1,48 @@
 [
   {
+    "listing": "/posts/probability/index.html",
+    "items": [
+      "/posts/bayesianinference/index.html",
+      "/posts/corrandreg/index.html",
+      "/posts/lln/index.html",
+      "/posts/statisticaltalk/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/statisticaltalk/index.html",
+    "items": [
+      "/posts/bayesianinference/index.html",
+      "/posts/corrandreg/index.html",
+      "/posts/lln/index.html",
+      "/posts/probability/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/posts/bayesianinference/index.html",
       "/posts/corrandreg/index.html",
-      "/posts/lln/index.html"
+      "/posts/lln/index.html",
+      "/posts/probability/index.html",
+      "/posts/statisticaltalk/index.html"
     ]
   },
   {
     "listing": "/posts/corrandreg/index.html",
-    "items": []
+    "items": [
+      "/posts/bayesianinference/index.html",
+      "/posts/lln/index.html",
+      "/posts/probability/index.html",
+      "/posts/statisticaltalk/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/bayesianinference/index.html",
+    "items": [
+      "/posts/corrandreg/index.html",
+      "/posts/lln/index.html",
+      "/posts/probability/index.html",
+      "/posts/statisticaltalk/index.html"
+    ]
   }
 ]
