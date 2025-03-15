@@ -1,1 +1,1 @@
-# statandprob
+This repository is a branch/page of my blog under the url mrislambd.github.io/statandprob

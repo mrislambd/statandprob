@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -302,7 +302,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -352,7 +352,7 @@ Correlation and regression are two fundamental concepts in statistics, often use
 <section id="correlation-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="correlation-analysis">Correlation Analysis</h2>
 <p>To better explain, we will use the following hypothetical stock data of 10 companies with stock price and their corresponding proportion in the portfolio.</p>
-<div id="940d2f55" class="cell" data-execution_count="1">
+<div id="83baadff" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -421,7 +421,7 @@ Correlation and regression are two fundamental concepts in statistics, often use
 </div>
 </div>
 <p>The scatterplot of the data looks like this</p>
-<div id="d6f7ed32" class="cell" data-execution_count="2">
+<div id="27642101" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mywebstyle <span class="im">import</span> plot_style</span>
@@ -493,7 +493,7 @@ The sample correlation coefficient, <span class="math inline">\(r\)</span>, is a
 </tbody>
 </table>
 <p>Let’s calculate the correlation of our stock data.</p>
-<div id="b9b49625" class="cell" data-execution_count="3">
+<div id="c73e9697" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
@@ -573,7 +573,7 @@ y - \mu_Y = \rho \frac{\sigma_Y}{\sigma_X} (x - \mu_X)
 &amp; = \mu_Y + \rho \frac{\sigma_Y}{\sigma_X} (x - \mu_X)
 \end{align*}\]</span></p>
 <p>This is the equation of a straight line in the <span class="math inline">\((X, Y)\)</span>-plane. The slope of the line is <span class="math inline">\(\rho \frac{\sigma_Y}{\sigma_X}\)</span>, and the line passes through the point <span class="math inline">\((\mu_X, \mu_Y)\)</span>. When <span class="math inline">\(|\rho| = 1\)</span>, all the joint probability mass collapses onto this line, meaning <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are perfectly linearly dependent.</p>
-<div id="f4042b6f" class="cell" data-execution_count="4">
+<div id="2d3b45ea" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -734,7 +734,7 @@ SS_{RES} &amp; = 6.97 - 5.695 = 1.275 \\
 \implies \hat{\sigma}^2 &amp; = \frac{1.275}{8}=0.1594\\
 R^2 &amp; = \frac{5.695}{6.97}=0.817
 \end{align*}\]</span></p>
-<div id="401cf081" class="cell" data-execution_count="5">
+<div id="77554367" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters for the line</span></span>
@@ -816,7 +816,7 @@ vs<br>
 \frac{0.836-0}{\sqrt{0.1594/8.53}}=6.1156
 \]</span></p>
 <p>which is way higher than the critical value at <span class="math inline">\(5\%\)</span> significance level.</p>
-<div id="e0682580" class="cell" data-execution_count="6">
+<div id="ca209ce5" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
@@ -941,7 +941,7 @@ Let’s put this two idea through our example. If we want to find a <span class=
 <p style="text-align: justify">
 Scatter plots of residuals versus the explanatory variable (or the fitted response values) are particularly insightful. A lack of random scatter in the residuals, such as the presence of a discernible pattern, indicates potential shortcomings in the model.
 </p>
-<div id="7e2e8386" class="cell" data-execution_count="7">
+<div id="f483d463" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
@@ -975,7 +975,7 @@ In this plot, we can see that the residuals tend to increase as <span class="mat
 \mathbb{E}[Y_i|X=x_i] &amp;= \alpha e^{\beta x_i}\\
 \implies z_i = \log y_i &amp; = \eta + \beta x_i + \epsilon_i; \hspace{4mm}\text{where }\eta=\log \alpha
 \end{align*}\]</span></p>
-<div id="19069bfc" class="cell" data-execution_count="8">
+<div id="3fcdc2e7" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> df.StockPrice.values</span>
@@ -1025,7 +1025,7 @@ S_{xx} &amp;= 8.53 \hspace{4mm} S_{yy}=0.70, \hspace{4mm} S_{xy}=2.29\\
 \hat{\alpha} &amp;= \frac{\sum y}{n} - \hat{\beta} \frac{\sum x}{n} = \bar{y}-\hat{\beta}\bar{x}\\
 &amp; = 1.143 - 0.268 \times 3.566 = 0.1873
 \end{align*}\]</span></p>
-<div id="469da8eb" class="cell" data-execution_count="9">
+<div id="b5efd136" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1114,7 +1114,52 @@ S_{xx} &amp;= 8.53 \hspace{4mm} S_{yy}=0.70, \hspace{4mm} S_{xy}=2.29\\
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1741999721636" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../../posts/lln/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Hello
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1741999893702">
+<a href="../../posts/.DS_Store" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1734587031891">
+<a href="../../posts/corrandreg/corr.png" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -1755,7 +1800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> corr.png</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">lightbox:</span><span class="co"> true</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span><span class="co"> </span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: "/../../dsandml"</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: "/../../posts"</span></span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">    max-items: 3</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">    type: grid</span></span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">    categories: true</span></span>
@@ -2552,7 +2597,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

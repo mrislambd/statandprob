@@ -8,7 +8,7 @@ search: true
 image: corr.png
 lightbox: true
 listing: 
-    contents: "/../../dsandml"
+    contents: "/../../posts"
     max-items: 3
     type: grid
     categories: true
