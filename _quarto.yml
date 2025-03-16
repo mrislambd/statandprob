@@ -17,6 +17,7 @@ website:
     pinned: true
     logo: "/_assets/images/fsu-logo.png"
     logo-alt: "Florida State University"
+    logo-href: index.qmd
     right:
       - href: https://mrislambd.github.io
         text: Home
@@ -29,7 +30,7 @@ website:
       - text: Blog
         menu: 
           - text: "Data Science and Machine Learning"
-            href: https://mrislambd.github.io/posts/machinelearning/
+            href: https://mrislambd.github.io/dsandml/
           - text: "Data Structure and Algorithm"
             href: https://mrislambd.github.io/letscode/
           - text: "Statistics and Probability"
@@ -43,11 +44,11 @@ website:
         href: "https://github.com/mrislambd"
         target: _blank
 
-page-footer: 
+  page-footer: 
     background: "#782F40"
     left: "Powered by [Quarto](https://quarto.org/) <?quarto.version?>"
     center:
-      - text: "Copyright 2024 @ Rafiq Islam"
+      - text: "Copyright 2025 @ Rafiq Islam"
       - text: "License"
         href: license.txt
     right: 
@@ -73,9 +74,7 @@ google-analytics:
 
 adsense: 
   publisher-id: ca-pub-6878992848042528
-filters: 
-  - adsense
-  - quarto-version.lua
+filters: []
 
   
 format:

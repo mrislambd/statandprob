@@ -1,6 +1,6 @@
 ---
 title: "Some Key Statistical Concepts for Interview Prep"
-date: "2024-09-05"
+date: "05/09/2024"
 author: Rafiq Islam
 categories: [Data Science, Machine Learning, Artificial Intelligence, Statistics]
 citation: true

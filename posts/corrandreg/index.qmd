@@ -1,6 +1,6 @@
 ---
 title: "Correlation, Bivariate, and Regression Analysis"
-date: "2024-12-18"
+date: "12/18/2024"
 author: Rafiq Islam
 categories: [Data Science, Machine Learning, Artificial Intelligence, Statistics]
 citation: true

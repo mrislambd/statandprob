@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Inference in Machine Learning: Part 1"
-date: "2024-07-28"
+date: "07/28/2024"
 author: "Rafiq Islam"
 image: pancake.jpeg
 categories: [Machine Learning, Data Science, Bayesian Inference, Bayesian Statistics, Statistics]

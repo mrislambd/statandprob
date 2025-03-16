@@ -1,7 +1,7 @@
 ---
 title: "Understanding Law of Large Numbers and Central Limit Theorem"
 author: Rafiq Islam
-date: "2025-03-15"
+date: "03/15/2025"
 categories: [Statistics, Probability]
 citation: true
 search: true

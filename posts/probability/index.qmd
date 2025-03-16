@@ -1,6 +1,6 @@
 ---
 title: "Review probabilities"
-date: "2024-08-22"
+date: "08/22/2024"
 author: Rafiq Islam
 categories: [Probability, Statistics]
 citation: true

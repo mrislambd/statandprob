@@ -114,9 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-author','listing-date','listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,7 +134,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6878992848042528" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -215,7 +214,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-blog">    
         <li>
-    <a class="dropdown-item" href="https://mrislambd.github.io/posts/machinelearning/">
+    <a class="dropdown-item" href="https://mrislambd.github.io/dsandml/">
  <span class="dropdown-text">Data Science and Machine Learning</span></a>
   </li>  
         <li>
@@ -258,8 +257,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="Artificial Intelligence">Artificial Intelligence</div><div class="category" data-category="Bayesian Inference">Bayesian Inference</div><div class="category" data-category="Bayesian Statistics">Bayesian Statistics</div><div class="category" data-category="Computational Mathematics">Computational Mathematics</div><div class="category" data-category="Data Science">Data Science</div><div class="category" data-category="Finance">Finance</div><div class="category" data-category="Financial Mathematics">Financial Mathematics</div><div class="category" data-category="Hedging">Hedging</div><div class="category" data-category="Machine Learning">Machine Learning</div><div class="category" data-category="Number Theory">Number Theory</div><div class="category" data-category="Pricing">Pricing</div><div class="category" data-category="Probability">Probability</div><div class="category" data-category="Programming">Programming</div><div class="category" data-category="Statistics">Statistics</div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -289,25 +288,70 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Machine Learning,Data Science,Bayesian Inference,Bayesian Statistics,Statistics" data-listing-date-sort="1722139200000" data-listing-file-modified-sort="1742003023950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1336">
+<div class="quarto-post image-right" data-index="0" data-categories="Programming,Finance,Financial Mathematics,Pricing,Hedging" data-listing-date-sort="1699765200000" data-listing-file-modified-sort="1742081042611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3012">
 <div class="thumbnail">
-<p><a href="./posts/bayesianinference/index.html" class="no-external"></a></p><a href="./posts/bayesianinference/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/bayesianinference/pancake.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/bayesianinference/index.html" class="no-external"></a></p>
+<p><a href="./posts/optionprice/index.html" class="no-external"></a></p><a href="./posts/optionprice/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/optionprice/bsm.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/optionprice/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/bayesianinference/index.html" class="no-external">Bayesian Inference in Machine Learning: Part 1</a>
+<a href="./posts/optionprice/index.html" class="no-external">Pricing Derivatives Using Black-Scholes-Merton Model</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/bayesianinference/index.html" class="no-external"></a>
+<a href="./posts/optionprice/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Programming'); return false;">
+Programming
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Finance'); return false;">
+Finance
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Financial Mathematics'); return false;">
+Financial Mathematics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pricing'); return false;">
+Pricing
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Hedging'); return false;">
+Hedging
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/optionprice/index.html" class="no-external">In this blog, we will explore how to price simple equity derivatives using the Black-Scholes-Merton (BSM) model. We will derive the mathematical formula and then provide…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/bayesianinference/index.html" class="no-external">
+<a href="./posts/optionprice/index.html" class="no-external">
 <div class="listing-date">
-Sunday, July 28, 2024
+Nov 12, 2023
 </div>
 <div class="listing-author">
 Rafiq Islam
@@ -315,57 +359,7 @@ Rafiq Islam
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Data Science,Machine Learning,Artificial Intelligence,Statistics" data-listing-date-sort="1734498000000" data-listing-file-modified-sort="1742001860854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3623">
-<div class="thumbnail">
-<p><a href="./posts/corrandreg/index.html" class="no-external"></a></p><a href="./posts/corrandreg/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/corrandreg/corr.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/corrandreg/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/corrandreg/index.html" class="no-external">Correlation, Bivariate, and Regression Analysis</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/corrandreg/index.html" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/corrandreg/index.html" class="no-external">
-<div class="listing-date">
-Wednesday, December 18, 2024
-</div>
-<div class="listing-author">
-Rafiq Islam
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Probability,Statistics" data-listing-date-sort="1724299200000" data-listing-file-modified-sort="1742002362204" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="369">
-<div class="thumbnail">
-<p><a href="./posts/probability/index.html" class="no-external"></a></p><a href="./posts/probability/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/probability/prob.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/probability/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/probability/index.html" class="no-external">Review probabilities</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/probability/index.html" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/probability/index.html" class="no-external">
-<div class="listing-date">
-Thursday, August 22, 2024
-</div>
-<div class="listing-author">
-Rafiq Islam
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Data Science,Machine Learning,Artificial Intelligence,Statistics" data-listing-date-sort="1725508800000" data-listing-file-modified-sort="1742003141082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
+<div class="quarto-post image-right" data-index="1" data-categories="Data Science,Machine Learning,Artificial Intelligence,Statistics" data-listing-date-sort="1715227200000" data-listing-file-modified-sort="1742071915981" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
 <div class="thumbnail">
 <p><a href="./posts/statisticaltalk/index.html" class="no-external"></a></p><a href="./posts/statisticaltalk/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/statisticaltalk/stat.jpeg" class="thumbnail-image"></p>
@@ -378,11 +372,29 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/statisticaltalk/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Artificial Intelligence'); return false;">
+Artificial Intelligence
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/statisticaltalk/index.html" class="no-external">
+In the world of data analysis and machine learning, statistics plays a vital role in making sense of the data. Whether you’re estimating parameters, testing hypotheses, or…</a>
+</div>
 </div>
 <div class="metadata">
 <a href="./posts/statisticaltalk/index.html" class="no-external">
 <div class="listing-date">
-Thursday, September 5, 2024
+May 9, 2024
 </div>
 <div class="listing-author">
 Rafiq Islam
@@ -390,7 +402,173 @@ Rafiq Islam
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Statistics,Probability" data-listing-date-sort="1742011200000" data-listing-file-modified-sort="1742059099784" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1476">
+<div class="quarto-post image-right" data-index="2" data-categories="Machine Learning,Data Science,Bayesian Inference,Bayesian Statistics,Statistics" data-listing-date-sort="1722139200000" data-listing-file-modified-sort="1742071783223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1336">
+<div class="thumbnail">
+<p><a href="./posts/bayesianinference/index.html" class="no-external"></a></p><a href="./posts/bayesianinference/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/bayesianinference/pancake.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bayesianinference/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/bayesianinference/index.html" class="no-external">Bayesian Inference in Machine Learning: Part 1</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/bayesianinference/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Bayesian Inference'); return false;">
+Bayesian Inference
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Bayesian Statistics'); return false;">
+Bayesian Statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/bayesianinference/index.html" class="no-external">
+ Bayesian inference is a powerful statistical method that applies the principles of Bayes’s theorem to update the probability of a hypothesis as more evidence or…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/bayesianinference/index.html" class="no-external">
+<div class="listing-date">
+Jul 28, 2024
+</div>
+<div class="listing-author">
+Rafiq Islam
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Data Science,Computational Mathematics,Number Theory" data-listing-date-sort="1723348800000" data-listing-file-modified-sort="1742081452594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2105">
+<div class="thumbnail">
+<p><a href="./posts/montecarlo1/index.html" class="no-external"></a></p><a href="./posts/montecarlo1/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/montecarlo1/mc1.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/montecarlo1/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/montecarlo1/index.html" class="no-external">Monte-Carlo Methods: PRNGs</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/montecarlo1/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Computational Mathematics'); return false;">
+Computational Mathematics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Number Theory'); return false;">
+Number Theory
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/montecarlo1/index.html" class="no-external">
+The Monte Carlo method is a widely used statistical technique that leverages the power of randomness to solve complex mathematical problems and simulate the behavior of…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/montecarlo1/index.html" class="no-external">
+<div class="listing-date">
+Aug 11, 2024
+</div>
+<div class="listing-author">
+Rafiq Islam
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Probability,Statistics" data-listing-date-sort="1724299200000" data-listing-file-modified-sort="1742071890632" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="369">
+<div class="thumbnail">
+<p><a href="./posts/probability/index.html" class="no-external"></a></p><a href="./posts/probability/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/probability/prob.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/probability/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/probability/index.html" class="no-external">Review probabilities</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/probability/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Probability'); return false;">
+Probability
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/probability/index.html" class="no-external">
+In today’s world, getting placement in data science world is highly challenging and competitive. It requires a lot of things including but not limited to basic knowledge in…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/probability/index.html" class="no-external">
+<div class="listing-date">
+Aug 22, 2024
+</div>
+<div class="listing-author">
+Rafiq Islam
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Data Science,Machine Learning,Artificial Intelligence,Statistics" data-listing-date-sort="1734498000000" data-listing-file-modified-sort="1742071824147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3623">
+<div class="thumbnail">
+<p><a href="./posts/corrandreg/index.html" class="no-external"></a></p><a href="./posts/corrandreg/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/corrandreg/corr.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/corrandreg/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/corrandreg/index.html" class="no-external">Correlation, Bivariate, and Regression Analysis</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/corrandreg/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Artificial Intelligence'); return false;">
+Artificial Intelligence
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/corrandreg/index.html" class="no-external">
+Correlation and regression are two fundamental concepts in statistics, often used to study relationships between variables. While correlation measures the strength and…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/corrandreg/index.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2024
+</div>
+<div class="listing-author">
+Rafiq Islam
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="Statistics,Probability" data-listing-date-sort="1742011200000" data-listing-file-modified-sort="1742071864253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1476">
 <div class="thumbnail">
 <p><a href="./posts/lln/index.html" class="no-external"></a></p><a href="./posts/lln/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/lln/lln.png" class="thumbnail-image"></p>
@@ -403,11 +581,23 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/lln/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Probability'); return false;">
+Probability
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/lln/index.html" class="no-external">
+Statistical inference is a fundamental part of data science and machine learning. Two of the most important theorems in probability theory that form the backbone of many…<strong></strong><strong></strong></a>
+</div>
 </div>
 <div class="metadata">
 <a href="./posts/lln/index.html" class="no-external">
 <div class="listing-date">
-Saturday, March 15, 2025
+Mar 15, 2025
 </div>
 <div class="listing-author">
 Rafiq Islam
@@ -415,7 +605,7 @@ Rafiq Islam
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1723155969000">
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1723155969000">
 <div class="thumbnail">
 <p><a href="./posts/bayesianinference/pancake.jpeg" class="no-external"></a></p><a href="./posts/bayesianinference/pancake.jpeg" class="no-external">
 </a><p><a href="./posts/bayesianinference/pancake.jpeg" class="no-external"></a></p>
@@ -427,13 +617,16 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/bayesianinference/pancake.jpeg" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/bayesianinference/pancake.jpeg" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/bayesianinference/pancake.jpeg" class="no-external"></a></p><a href="./posts/bayesianinference/pancake.jpeg" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1722212776330">
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1722212776330">
 <div class="thumbnail">
 <p><a href="./posts/bayesianinference/ven.png" class="no-external"></a></p><a href="./posts/bayesianinference/ven.png" class="no-external">
 </a><p><a href="./posts/bayesianinference/ven.png" class="no-external"></a></p>
@@ -445,13 +638,16 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/bayesianinference/ven.png" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/bayesianinference/ven.png" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/bayesianinference/ven.png" class="no-external"></a></p><a href="./posts/bayesianinference/ven.png" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1734587031891">
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1734587031891">
 <div class="thumbnail">
 <p><a href="./posts/corrandreg/corr.png" class="no-external"></a></p><a href="./posts/corrandreg/corr.png" class="no-external">
 </a><p><a href="./posts/corrandreg/corr.png" class="no-external"></a></p>
@@ -463,85 +659,16 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/corrandreg/corr.png" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/corrandreg/corr.png" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/corrandreg/corr.png" class="no-external"></a></p><a href="./posts/corrandreg/corr.png" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1742059108650">
-<div class="thumbnail">
-<p><a href="./posts/lln/index-listing.json" class="no-external"></a></p><a href="./posts/lln/index-listing.json" class="no-external">
-</a><p><a href="./posts/lln/index-listing.json" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/lln/index-listing.json" class="no-external"></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/lln/index-listing.json" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/lln/index-listing.json" class="no-external"></a></p><a href="./posts/lln/index-listing.json" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1742059108855">
-<div class="thumbnail">
-<p><a href="./posts/lln/index.html" class="no-external"></a></p><a href="./posts/lln/index.html" class="no-external">
-</a><p><a href="./posts/lln/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/lln/index.html" class="no-external"></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/lln/index.html" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/lln/index.html" class="no-external"></a></p><a href="./posts/lln/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1742059106032">
-<div class="thumbnail">
-<p><a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external"></a></p><a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external">
-</a><p><a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external"></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external"></a></p><a href="./posts/lln/index_files/figure-html/cell-3-output-1.png" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1742059106034">
-<div class="thumbnail">
-<p><a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external"></a></p><a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external">
-</a><p><a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external"></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external"></a></p><a href="./posts/lln/index_files/figure-html/cell-4-output-1.png" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1742059102801">
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1742071869729">
 <div class="thumbnail">
 <p><a href="./posts/lln/lln.png" class="no-external"></a></p><a href="./posts/lln/lln.png" class="no-external">
 </a><p><a href="./posts/lln/lln.png" class="no-external"></a></p>
@@ -553,13 +680,16 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/lln/lln.png" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/lln/lln.png" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/lln/lln.png" class="no-external"></a></p><a href="./posts/lln/lln.png" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1742013851358">
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1742013851358">
 <div class="thumbnail">
 <p><a href="./posts/lln/lln.webp" class="no-external"></a></p><a href="./posts/lln/lln.webp" class="no-external">
 </a><p><a href="./posts/lln/lln.webp" class="no-external"></a></p>
@@ -571,13 +701,79 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/lln/lln.webp" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/lln/lln.webp" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/lln/lln.webp" class="no-external"></a></p><a href="./posts/lln/lln.webp" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1724359503386">
+<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1723362531421">
+<div class="thumbnail">
+<p><a href="./posts/montecarlo1/mc1.png" class="no-external"></a></p><a href="./posts/montecarlo1/mc1.png" class="no-external">
+</a><p><a href="./posts/montecarlo1/mc1.png" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/montecarlo1/mc1.png" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/montecarlo1/mc1.png" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/montecarlo1/mc1.png" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./posts/montecarlo1/mc1.png" class="no-external"></a></p><a href="./posts/montecarlo1/mc1.png" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1726099646345">
+<div class="thumbnail">
+<p><a href="./posts/montecarlo1/pi.png" class="no-external"></a></p><a href="./posts/montecarlo1/pi.png" class="no-external">
+</a><p><a href="./posts/montecarlo1/pi.png" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/montecarlo1/pi.png" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/montecarlo1/pi.png" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/montecarlo1/pi.png" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./posts/montecarlo1/pi.png" class="no-external"></a></p><a href="./posts/montecarlo1/pi.png" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1734053518926">
+<div class="thumbnail">
+<p><a href="./posts/optionprice/bsm.png" class="no-external"></a></p><a href="./posts/optionprice/bsm.png" class="no-external">
+</a><p><a href="./posts/optionprice/bsm.png" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/optionprice/bsm.png" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/optionprice/bsm.png" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/optionprice/bsm.png" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./posts/optionprice/bsm.png" class="no-external"></a></p><a href="./posts/optionprice/bsm.png" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1724359503386">
 <div class="thumbnail">
 <p><a href="./posts/probability/prob.png" class="no-external"></a></p><a href="./posts/probability/prob.png" class="no-external">
 </a><p><a href="./posts/probability/prob.png" class="no-external"></a></p>
@@ -589,13 +785,16 @@ Rafiq Islam
 <div class="listing-subtitle">
 <a href="./posts/probability/prob.png" class="no-external"></a>
 </div>
+<div class="listing-description">
+<a href="./posts/probability/prob.png" class="no-external"></a>
+</div>
 </div>
 <div class="metadata">
 <p><a href="./posts/probability/prob.png" class="no-external"></a></p><a href="./posts/probability/prob.png" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1726096329000">
+<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1726096329000">
 <div class="thumbnail">
 <p><a href="./posts/statisticaltalk/stat.jpeg" class="no-external"></a></p><a href="./posts/statisticaltalk/stat.jpeg" class="no-external">
 </a><p><a href="./posts/statisticaltalk/stat.jpeg" class="no-external"></a></p>
@@ -605,6 +804,9 @@ Rafiq Islam
 <a href="./posts/statisticaltalk/stat.jpeg" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/statisticaltalk/stat.jpeg" class="no-external"></a>
+</div>
+<div class="listing-description">
 <a href="./posts/statisticaltalk/stat.jpeg" class="no-external"></a>
 </div>
 </div>
@@ -1238,12 +1440,54 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">search:</span><span class="co"> true</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span><span class="co"> </span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: "../posts/"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  date-format: full</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [author, date, title, image]</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: true</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  filter-ui: true</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: unnumbered</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Powered by <a href="https://quarto.org/">Quarto</a> <!--?quarto.version?--></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Copyright 2025 @ Rafiq Islam
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.txt">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rafiqr35" target="_blank">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@quanttube" target="_blank">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:rafiqfsu@gmail.com?subject&amp;body" target="_blank">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

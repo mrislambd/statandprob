@@ -4,3 +4,4 @@ seaborn
 scipy
 matplotlib
 -e ./mywebstyle
+plotly

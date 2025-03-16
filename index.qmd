@@ -3,8 +3,9 @@ title: "Basic Statistics and Probability"
 search: true
 listing: 
   contents: "../posts/"
-  type: default
-  date-format: full
-  fields: [author, date, title, image]
+  sort-ui: true
+  sort: "date"
+  filter-ui: true
+  categories: unnumbered
 ---
 
