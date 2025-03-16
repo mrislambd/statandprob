@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mrislambd.github.io/posts/lln/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.794Z</lastmod>
+    <loc>https://mrislambd.github.io/posts/bayesianinference/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.032Z</lastmod>
   </url>
   <url>
-    <loc>https://mrislambd.github.io/posts/probability/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mrislambd.github.io/posts/statisticaltalk/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mrislambd.github.io/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.792Z</lastmod>
+    <loc>https://mrislambd.github.io/posts/montecarlo1/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.035Z</lastmod>
   </url>
   <url>
     <loc>https://mrislambd.github.io/posts/corrandreg/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.794Z</lastmod>
+    <lastmod>2025-03-16T00:39:29.033Z</lastmod>
   </url>
   <url>
-    <loc>https://mrislambd.github.io/posts/bayesianinference/index.html</loc>
-    <lastmod>2025-03-15T17:20:39.793Z</lastmod>
+    <loc>https://mrislambd.github.io/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mrislambd.github.io/posts/statisticaltalk/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mrislambd.github.io/posts/optionprice/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mrislambd.github.io/posts/probability/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mrislambd.github.io/posts/lln/index.html</loc>
+    <lastmod>2025-03-16T00:39:29.033Z</lastmod>
   </url>
 </urlset>

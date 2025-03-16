@@ -36,6 +36,7 @@
 .content {
   margin-top: 60px; /* Adjust based on the height of your navbar */
   /* Other styles for your content */
+  margin-bottom: 80px;
 }
 
 .sidebar {
@@ -85,3 +86,5 @@ details[open] summary {
   border-bottom: none;
   margin-bottom: 0;
 }
+
+
