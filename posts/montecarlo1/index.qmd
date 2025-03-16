@@ -5,6 +5,8 @@ author: Rafiq Islam
 categories: [Data Science, Computational Mathematics, Number Theory]
 citation: true
 search: true
+aliases: 
+  - https://mrislambd.github.io/posts/montecarlo1/
 lightbox: true
 image: mc1.png
 listing: 
