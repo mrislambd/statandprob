@@ -74,7 +74,9 @@ google-analytics:
 
 adsense: 
   publisher-id: ca-pub-6878992848042528
-filters: []
+filters:
+  - adsense 
+  - quarto-version.lua
 
   
 format:
